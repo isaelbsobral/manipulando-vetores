@@ -182,7 +182,7 @@ public class JVetor extends javax.swing.JFrame {
          for (int i=0; i<=numero.length;i++){
             if(numero[i] == 0){
                 numero[i]= valor;
-                topo++;                
+                topo++;           
                 txtValor.setText("");//limpar o campo de texto depois de adicionado um valor               
                 break;
             }
@@ -215,7 +215,7 @@ public class JVetor extends javax.swing.JFrame {
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         int valor = Integer.parseInt(txtValor.getText());
-        addElements(valor);       
+        addElements(valor);      
         
     }//GEN-LAST:event_btnAddActionPerformed
 
