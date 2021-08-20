@@ -21,6 +21,10 @@ Manipular um vetor por meio de uma Interface Gráfica (GUI) em Java.
 
 - Limpar a tela
 
+- Somar valores
+
+- Exibir quantidade de valores pares e ímpares
+
   
 
 ## Ferramentas utilizadas :gear:
