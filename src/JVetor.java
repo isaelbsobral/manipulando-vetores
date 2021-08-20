@@ -216,7 +216,7 @@ public class JVetor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int [] numero = new int[4];
+    int [] numero = new int[10];
     int topo = 0, aux = 0, maior = 0, soma = 0;
     
     public void adicionarValor(int valor){
