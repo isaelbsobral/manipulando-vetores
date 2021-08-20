@@ -28,44 +28,45 @@ public class JVetor extends javax.swing.JFrame {
 
         btnAdd = new javax.swing.JButton();
         btnDel = new javax.swing.JButton();
-        btnShow = new javax.swing.JButton();
+        btnExibir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtValor = new javax.swing.JTextField();
         labelVetor = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnOrdemCresc = new javax.swing.JButton();
+        btnOrdDecr = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        btnHighestValue = new javax.swing.JButton();
-        btnClearLabel = new javax.swing.JButton();
+        btnMaior = new javax.swing.JButton();
+        btnLimpar = new javax.swing.JButton();
+        btnMenor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnAdd.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        btnAdd.setText("Add");
+        btnAdd.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnAdd.setText("Adic.");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
 
-        btnDel.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        btnDel.setText("Del");
+        btnDel.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnDel.setText("Del.");
         btnDel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDelActionPerformed(evt);
             }
         });
 
-        btnShow.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        btnShow.setText("Display");
-        btnShow.addActionListener(new java.awt.event.ActionListener() {
+        btnExibir.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnExibir.setText("Exibir");
+        btnExibir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnShowActionPerformed(evt);
+                btnExibirActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jLabel1.setText("Value");
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 13)); // NOI18N
+        jLabel1.setText("Valor");
 
         txtValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,38 +74,46 @@ public class JVetor extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton1.setText("Ascending ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnOrdemCresc.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnOrdemCresc.setText("Ordem Cresc.");
+        btnOrdemCresc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnOrdemCrescActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jButton2.setText("Descending");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnOrdDecr.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnOrdDecr.setText("Ordem Decr.");
+        btnOrdDecr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnOrdDecrActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jLabel2.setText("Manipulating Vectors");
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel2.setText("Manipulando Vetores");
 
-        btnHighestValue.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        btnHighestValue.setText("Highest Value");
-        btnHighestValue.addActionListener(new java.awt.event.ActionListener() {
+        btnMaior.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnMaior.setText("Maior");
+        btnMaior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHighestValueActionPerformed(evt);
+                btnMaiorActionPerformed(evt);
             }
         });
 
-        btnClearLabel.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        btnClearLabel.setText("Clear");
-        btnClearLabel.addActionListener(new java.awt.event.ActionListener() {
+        btnLimpar.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearLabelActionPerformed(evt);
+                btnLimparActionPerformed(evt);
+            }
+        });
+
+        btnMenor.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
+        btnMenor.setText("Menor");
+        btnMenor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenorActionPerformed(evt);
             }
         });
 
@@ -113,62 +122,65 @@ public class JVetor extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnExibir)
+                .addGap(5, 5, 5)
+                .addComponent(btnOrdemCresc)
+                .addGap(2, 2, 2)
+                .addComponent(btnOrdDecr)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnMaior)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnMenor)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelVetor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(221, 221, 221))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(labelVetor, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnShow)
-                        .addGap(9, 9, 9)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnHighestValue))
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(238, 238, 238)
-                        .addComponent(btnClearLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(278, 278, 278)
+                        .addComponent(btnLimpar)))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel2)
-                .addGap(31, 31, 31)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdd)
-                    .addComponent(btnDel)
-                    .addComponent(btnShow)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(btnHighestValue))
+                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnExibir, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnOrdemCresc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnOrdDecr, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMaior, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMenor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(labelVetor, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelVetor, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnClearLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -177,18 +189,18 @@ public class JVetor extends javax.swing.JFrame {
     int topo = 0;
     int aux = 0;
     int maior = 0;    
-    String maiorValor = "";
-    public void addElements(int valor){
+    //String maiorValor = "";
+    public void adicionarValor(int valor){
          for (int i=0; i<=numero.length;i++){
             if(numero[i] == 0){
                 numero[i]= valor;
                 topo++;           
-                txtValor.setText("");//limpar o campo de texto depois de adicionado um valor               
+                txtValor.setText("");//limpa o campo de texto depois de adicionado um valor               
                 break;
             }
         }
     }
-    public void delElements(int valor){
+    public void deletarValor(int valor){
          for (int i = 0;i<topo;i++){
              if (numero[i] == valor){
                  numero[i] = 0;                 
@@ -202,97 +214,89 @@ public class JVetor extends javax.swing.JFrame {
              txtValor.setText("");
          }
     }
-    public void displayElements(){
+    public void exibirValor(){
         String vetorFinal = "";
-        for (int i=0;i<numero.length;i++){
-            System.out.println(numero[i]);
-            vetorFinal += numero[i] + " , ";
-            //labelVetor.setText("");
-        }
-        
-        labelVetor.setText(vetorFinal);
-        
+        for (int i=0;i<numero.length;i++){            
+            vetorFinal += numero[i] + "  ";
+          }        
+        labelVetor.setText(vetorFinal);        
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         int valor = Integer.parseInt(txtValor.getText());
-        addElements(valor);      
-        
+        adicionarValor(valor); 
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
-        // TODO add your handling code here:
-         int valor = Integer.parseInt(txtValor.getText());
-         delElements(valor);        
-         
+       int valor = Integer.parseInt(txtValor.getText());
+        deletarValor(valor);   
     }//GEN-LAST:event_btnDelActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int ascending;  
-        String vetorOrdCres="";
+    private void btnOrdemCrescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdemCrescActionPerformed
+        int aux3;  
+        String ordemCresc="";
         for (int i = 0;i<numero.length;i++){
                for (int j = 0;j<numero.length;j++){
                    if(numero[j]>numero[i]){
-                       ascending = numero[i];
+                       aux3 = numero[i];
                        numero[i] = numero[j];                       
-                       numero[j] = ascending;
+                       numero[j] = aux3;
                    } 
-               }
-               
-            }
-       
+               }               
+            }       
         for(int i=0;i<numero.length;i++){
-            vetorOrdCres += numero[i]+", " ;
-            System.out.println(numero[i]);
+            ordemCresc += numero[i]+" " ;
+            //System.out.println(numero[i]);
         }
-        labelVetor.setText(vetorOrdCres);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        labelVetor.setText(ordemCresc);
+    }//GEN-LAST:event_btnOrdemCrescActionPerformed
 
-    private void btnShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowActionPerformed
-        displayElements();
-    }//GEN-LAST:event_btnShowActionPerformed
+    private void btnExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExibirActionPerformed
+        exibirValor();
+    }//GEN-LAST:event_btnExibirActionPerformed
 
-    private void btnClearLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearLabelActionPerformed
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
        labelVetor.setText("");
-    }//GEN-LAST:event_btnClearLabelActionPerformed
+    }//GEN-LAST:event_btnLimparActionPerformed
 
     private void txtValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValorActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtValorActionPerformed
 
-    private void btnHighestValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHighestValueActionPerformed
-       String highestValue = "";
+    private void btnMaiorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaiorActionPerformed
+       String maiorValor = "";
         for (int i = 0;i<numero.length;i++){
            if(numero[i]>maior){
                maior = numero[i];              
            }
        }      
-       highestValue = Integer.toString(maior);
-       labelVetor.setText(highestValue);
-    }//GEN-LAST:event_btnHighestValueActionPerformed
+       maiorValor = Integer.toString(maior);
+       labelVetor.setText(maiorValor);
+    }//GEN-LAST:event_btnMaiorActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnOrdDecrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdDecrActionPerformed
         // TODO add your handling code here:
         //String descending = "" ;
-        int descending;
-        String vetorOrdDesc = "";
+        int aux4;
+        String ordDecresc = "";
         for (int i = 0;i<numero.length;i++){
                for (int j = 0;j<numero.length;j++){
                    if(numero[j]<numero[i]){
-                       descending = numero[i];
+                       aux4 = numero[i];
                        numero[i] = numero[j];                       
-                       numero[j] = descending;
+                       numero[j] = aux4;
                    } 
                }
-               
-            }
-         for(int i=0;i<numero.length;i++){
-            System.out.println(numero[i]);
-            //vetorOrdenado += meuVetor[i] + " , ";
-            vetorOrdDesc += numero[i] +", ";
         }
-         labelVetor.setText(vetorOrdDesc);
+         for(int i=0;i<numero.length;i++){            
+            ordDecresc += numero[i] +" ";
+        }
+         labelVetor.setText(ordDecresc);
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnOrdDecrActionPerformed
+
+    private void btnMenorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMenorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,12 +335,13 @@ public class JVetor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnClearLabel;
     private javax.swing.JButton btnDel;
-    private javax.swing.JButton btnHighestValue;
-    private javax.swing.JButton btnShow;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnExibir;
+    private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnMaior;
+    private javax.swing.JButton btnMenor;
+    private javax.swing.JButton btnOrdDecr;
+    private javax.swing.JButton btnOrdemCresc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel labelVetor;
