@@ -40,6 +40,8 @@ public class JVetor extends javax.swing.JFrame {
         btnMenor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 204, 255));
+        setForeground(new java.awt.Color(102, 204, 255));
 
         btnAdd.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
         btnAdd.setText("Adic.");
@@ -65,14 +67,20 @@ public class JVetor extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 13)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 14)); // NOI18N
         jLabel1.setText("Valor");
 
+        txtValor.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 12)); // NOI18N
+        txtValor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtValorActionPerformed(evt);
             }
         });
+
+        labelVetor.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 18)); // NOI18N
+        labelVetor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelVetor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         btnOrdemCresc.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 11)); // NOI18N
         btnOrdemCresc.setText("Ordem Cresc.");
@@ -101,7 +109,7 @@ public class JVetor extends javax.swing.JFrame {
             }
         });
 
-        btnLimpar.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        btnLimpar.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 12)); // NOI18N
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,9 +157,9 @@ public class JVetor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
+                        .addGap(135, 135, 135)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
+                        .addGap(31, 31, 31)
                         .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(278, 278, 278)
@@ -165,9 +173,9 @@ public class JVetor extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,16 +188,16 @@ public class JVetor extends javax.swing.JFrame {
                 .addComponent(labelVetor, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    int [] numero = new int[10];
+    int [] numero = new int[4];
     int topo = 0;
     int aux = 0;
-    int maior = 0;    
-    //String maiorValor = "";
+    int maior = 0;   
+    //int menor = 0;
     public void adicionarValor(int valor){
          for (int i=0; i<=numero.length;i++){
             if(numero[i] == 0){
@@ -217,7 +225,7 @@ public class JVetor extends javax.swing.JFrame {
     public void exibirValor(){
         String vetorFinal = "";
         for (int i=0;i<numero.length;i++){            
-            vetorFinal += numero[i] + "  ";
+            vetorFinal += numero[i] + " ";
           }        
         labelVetor.setText(vetorFinal);        
     }
@@ -232,14 +240,14 @@ public class JVetor extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDelActionPerformed
 
     private void btnOrdemCrescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdemCrescActionPerformed
-        int aux3;  
+        int aux2;  
         String ordemCresc="";
         for (int i = 0;i<numero.length;i++){
                for (int j = 0;j<numero.length;j++){
                    if(numero[j]>numero[i]){
-                       aux3 = numero[i];
+                       aux2 = numero[i];
                        numero[i] = numero[j];                       
-                       numero[j] = aux3;
+                       numero[j] = aux2;
                    } 
                }               
             }       
@@ -263,7 +271,7 @@ public class JVetor extends javax.swing.JFrame {
     }//GEN-LAST:event_txtValorActionPerformed
 
     private void btnMaiorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaiorActionPerformed
-       String maiorValor = "";
+       String maiorValor = " ";
         for (int i = 0;i<numero.length;i++){
            if(numero[i]>maior){
                maior = numero[i];              
@@ -276,14 +284,14 @@ public class JVetor extends javax.swing.JFrame {
     private void btnOrdDecrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdDecrActionPerformed
         // TODO add your handling code here:
         //String descending = "" ;
-        int aux4;
+        int aux3;
         String ordDecresc = "";
         for (int i = 0;i<numero.length;i++){
                for (int j = 0;j<numero.length;j++){
                    if(numero[j]<numero[i]){
-                       aux4 = numero[i];
+                       aux3 = numero[i];
                        numero[i] = numero[j];                       
-                       numero[j] = aux4;
+                       numero[j] = aux3;
                    } 
                }
         }
@@ -295,7 +303,16 @@ public class JVetor extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrdDecrActionPerformed
 
     private void btnMenorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenorActionPerformed
-        // TODO add your handling code here:
+        String menorValor = " ";
+       int menor = numero[0];
+        for (int i = 0; i<numero.length;i++){           
+              if (numero[i]< menor){
+               menor = numero[i];           
+           }
+            
+        }
+        menorValor = Integer.toString(menor);
+        labelVetor.setText(menorValor);
     }//GEN-LAST:event_btnMenorActionPerformed
 
     /**
