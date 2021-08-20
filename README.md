@@ -31,6 +31,8 @@ Manipular um vetor por meio de uma Interface Gráfica (GUI) em Java.
 
 - Classe JFrame
 
+- JDK (Java Development Kit) 8
+
   
 
 ## Aprendizados :muscle:
