@@ -341,9 +341,9 @@ public class JVetor extends javax.swing.JFrame {
         int par = 0,impar=0;
         String qtdPar = "", qtdImpar = "" ;
         for (int i=0; i<numero.length;i++){
-            if (numero[i]%2 ==0){
+            if (numero[i]%2 ==0 && numero[i] != 0){
                 par += 1;
-            }else{
+            }else if (numero[i]%2 !=0 && numero[i] != 0){
                 impar += 1;
             }
         }
