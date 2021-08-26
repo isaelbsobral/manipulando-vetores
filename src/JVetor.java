@@ -247,8 +247,10 @@ public class JVetor extends javax.swing.JFrame {
     public void exibirValor(){
         String vetorFinal = "";
         for (int i=0;i<numero.length;i++){            
+            if (numero[i] !=0){
             vetorFinal += numero[i] + " ";
-          }        
+          }  
+        }
         labelVetor.setText(vetorFinal);        
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -274,8 +276,9 @@ public class JVetor extends javax.swing.JFrame {
                }               
             }       
         for(int i=0;i<numero.length;i++){
+            if(numero[i] != 0 ){
             ordemCresc += numero[i]+" " ;
-            //System.out.println(numero[i]);
+           }
         }
         labelVetor.setText(ordemCresc);
     }//GEN-LAST:event_btnOrdemCrescActionPerformed
@@ -310,7 +313,7 @@ public class JVetor extends javax.swing.JFrame {
         String ordDecresc = "";
         for (int i = 0;i<numero.length;i++){
                for (int j = 0;j<numero.length;j++){
-                   if(numero[j]<numero[i]){
+                   if(numero[j]<numero[i] && numero[j] !=0){
                        aux3 = numero[i];
                        numero[i] = numero[j];                       
                        numero[j] = aux3;
@@ -318,17 +321,20 @@ public class JVetor extends javax.swing.JFrame {
                }
         }
          for(int i=0;i<numero.length;i++){            
-            ordDecresc += numero[i] +" ";
+             if(numero[i] != 0 ){
+               ordDecresc += numero[i] +" ";  
+             }
+             
         }
          labelVetor.setText(ordDecresc);
         
     }//GEN-LAST:event_btnOrdDecrActionPerformed
 
     private void btnMenorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenorActionPerformed
-        String menorValor = " ";
+       String menorValor = " ";
        int menor = numero[0];
         for (int i = 0; i<numero.length;i++){           
-              if (numero[i]< menor){
+              if (numero[i]< menor && numero[i] != 0){
                menor = numero[i];           
            }
             
@@ -341,9 +347,9 @@ public class JVetor extends javax.swing.JFrame {
         int par = 0,impar=0;
         String qtdPar = "", qtdImpar = "" ;
         for (int i=0; i<numero.length;i++){
-            if (numero[i]%2 ==0 && numero[i] != 0){
+            if (numero[i]%2 == 0 && numero[i] != 0){
                 par += 1;
-            }else if (numero[i]%2 !=0 && numero[i] != 0){
+            }else if (numero[i]%2 != 0 && numero[i] != 0){
                 impar += 1;
             }
         }
